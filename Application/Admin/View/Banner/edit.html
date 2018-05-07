@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form id="form1" action="__CONTROLLER__/update"  method="post">
+	<input type="hidden" name="id" value="{$list.id}">
+	title:<input type="text" name="title" value="{$list.title}"> <br>
+	banner-pic:<input type="text" name="banner-pic" value="{$list.banner-pic}"><br>
+	time:<input type="date" name="time" value="{$list.time}"><br>
+	number:<input type="text" name="number" value="{$list.number}"><br>
+	author:<input type="text" name="author" value="{$list.author}"><br>
+	content:<input type="text" name = "content" value="{$list.content}"><br>
+	status:<input type="text" name="status" value="{$list.status}"><br>
+	<input type="submit" name="" value="修改" />
+	</form>
+</body>
+</html>

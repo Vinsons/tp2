@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<table class="table table-border table-bordered table-bg table-hover table-sort">
+    <thead>
+    <a href="__CONTROLLER__/insert.html">新增</a>
+      <tr class="text-c">
+       
+        <th width="80">ID</th>
+        <th width="100">用户名</th>
+        <th width="150">密码</th>
+        <th width="150">登录时间</th>
+        <th width="150">注册时间</th>
+        <th width="150">ip</th>
+        <th width="150">状态</th>
+        <th width="150">操作</th>
+      </tr>
+    </thead>
+    <tbody>
+    <volist name="list"  id="vol">
+      	<tr>
+        
+        <td >{$vol.id}</td>
+        <td >{$vol.username}</td>
+        <td >{$vol.password}</td>
+        <td >{$vol.logintime}</td>
+        <td >{$vol.create_time}</td>
+        <td >{$vol.ip}</td>
+        <td >{$vol.status}</td>
+        <td ><a href="__CONTROLLER__/del/id/{$vol.id}">启用</a>|<a href="__CONTROLLER__/edit/id/{$vol.id}">编辑</a>|<a href="__CONTROLLER__/delete/id/{$vol.id}"onClick="return confirm('确定要删除吗?')">删除</a></td>
+      	
+      	</tr>
+      	</volist>
+
+    </tbody>
+
+  </table>
+    <div >{$page}</div>
+</body>
+</html>
